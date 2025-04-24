@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>helo</title>
+    <style>
+        body {
+            background: black;
+            color: lime;
+            font-family: "Courier New", monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        a {
+            color: cyan;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        a:hover {
+            color: magenta;
+            text-shadow: 0 0 5px white;
+        }
+        .glitch {
+            font-size: 40px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            animation: glitch 1s infinite alternate;
+        }
+        @keyframes glitch {
+            0% { transform: translateX(2px); color: red; }
+            50% { transform: translateX(-2px); color: lime; }
+            100% { transform: translateX(2px); color: blue; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="glitch">ukaz kozy!</h1>
+		<h2 class="glitch">ukaz kozy!</h2>
+			<h3 class="glitch">ukaz kozy!</h3>
+				<h4 class="glitch">ukaz kozy!</h4>
+				
+	<br>
+	<p><button onclick="window.location.href='obrazok2.html'">SEM</button></p>
+	
+</body>
+</html>
