@@ -54,14 +54,14 @@
 
   <script>
     const frames = [
-      `  |\\__/,|   (\`\\ \n _.|o o  |_   ) )\n-(((---(((--------`,
-      `  |\\__/,|   (\`\n _.|o o  |_   ) )\n-(((---(((--------`,
-      `  |\\__/,|   (')\n _.|o o  |_   ) )\n-(((---(((--------`,
-      `  |\\__/,|   (`)\n _.|o o  |_   ) )\n-(((---(((--------`
-  ];
-          let i = 0;
-          setInterval(() => {
-       document.getElementById('ascii').innerText = frames[i % frames.length];
+      "  |\\__/,|   (`\\ \n _.|o o  |_   ) )\n-(((---(((--------",
+      "  |\\__/,|   (`  \n _.|o o  |_   ) )\n-(((---(((--------",
+      "  |\\__/,|   (') \n _.|o o  |_   ) )\n-(((---(((--------",
+      "  |\\__/,|   (`) \n _.|o o  |_   ) )\n-(((---(((--------"
+    ];
+    let i = 0;
+    setInterval(() => {
+      document.getElementById('ascii').innerText = frames[i % frames.length];
       i++;
     }, 120);
   </script>
