@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Video s automatickým presmerovaním</title>
+  <style>
+    body {
+        background: black;
+    }
+    </style>
 </head>
 <body>
-
-<video id="mojeVideo" width="1920" height="1080" autoplay>
-  <source src="Video(1).mp4" type="video/mp4">
+<video controls id="mojeVideo" width="70%" height="70%" autoplay="autoplay" muted>
+  <source src="Video(1).mp4"  type="video/mp4">
   Tvoj prehliadač nepodporuje prehrávanie videa.
 </video>
+<a href="index.html">Chase</a>
 
-<script>
-  // Po 10 sekundách od načítania stránky presmeruje na inú stránku
-  setTimeout(() => {
-    window.location.href = 'index.html'; // zmeň na cieľovú URL
-  }, 5000); // 10 000 ms = 10 sekúnd
-</script>
 
 </body>
 </html>
