@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body {
+    text-align: center;
+    font-size: 15cm;
+    font-weight: 900;
+    color: red;
+    text-decoration-color: aqua;
+    
+  }
+  </style>
+    <script type="text/javascript">
+
+  var count=0;
+var aa=1;
+
+var counter=setInterval(timer, 10); //1000 will  run it every 1 second
+
+function timer()
+{
+  
+  if ((count < 100)&&(aa==1) )
+  {
+  count=count+1;
+ 
+  }
+  else 
+  {
+  if ((count <= 0)&&(aa==2) )
+  {
+  aa=1;
+  }else{
+  aa=2;
+  count=count-1;}
+  }
+  
+  var ir = Math.floor((count*(255/100)));
+var ig = Math.floor((count*(255/100)));
+var ib = Math.floor((count*(255/100)));
+
+  var irc = Math.floor((255-count*(255/120)));
+var igc = Math.floor((255-count*(255/120)));
+var ibc = Math.floor((255-count*(255/120)));
+var fs = 14+(count*2);
+document.body.style.background = 'rgb('+ir+','+ig+','+ib+')';
+document.getElementById("timer").style.color = 'rgb('+irc+','+igc+','+ibc+')';
+
+document.getElementById("timer").style.fontSize = fs+'px';
+ document.getElementById("timer").innerHTML="Y T "+ count ; // watch for spelling
+}
+
+
+
+    </script>
+    <title>YES
+    </title>
+</head>
+
+<body>
+  <div class="center-text">
+    <a href="Crossroads.html">You see a hall with many doors</a>
+  </div>
+</body>
+</html>

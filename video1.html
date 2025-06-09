@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Prehratie videa</title>
+  <meta charset="UTF-8" />
+  <title>Flow Animation</title>
+  <style>
+    html, body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    svg {
+      width: 80vw;
+      height: 80vh;
+    }
+
+    .glow {
+      offset-path: path("M50,300 C200,50 400,550 550,300");
+      animation: flow 4s linear infinite;
+      filter: drop-shadow(0 0 10px cyan);
+    }
+
+    @keyframes flow {
+      0% {
+        offset-distance: 0%;
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      10% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      90% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        offset-distance: 100%;
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+  </style>
 </head>
 <body>
+  <svg id="flow-svg" viewBox="0 0 600 600">
+    <defs>
+      <path id="pipe-path" d="M50,300 C200,50 400,550 550,300" />
+    </defs>
 
-<video id="mojeVideo" width="640" height="360" autoplay>
-  <source src="Video(1).mp4" type="video/mp4">
-  Tvoj prehliadač nepodporuje prehrávanie videa.
-</video>
+    <!-- Visual pipe -->
+    <use href="#pipe-path" stroke="#333" stroke-width="4" fill="none"/>
 
-<script>
-  const video = document.getElementById('mojeVideo');
-
-  video.addEventListener('ended', () => {
-    window.location.href = 'index.html'; // sem zadaj URL cieľovej stránky
-  });
-</script>
-
+    <!-- Flow particles -->
+    <circle class="glow" r="6" fill="cyan" style="animation-delay: 0s"/>
+    <circle class="glow" r="6" fill="magenta" style="animation-delay: 1s"/>
+    <circle class="glow" r="6" fill="lime" style="animation-delay: 2s"/>
+    <circle class="glow" r="6" fill="yellow" style="animation-delay: 3s"/>
+  </svg>
 </body>
 </html>
